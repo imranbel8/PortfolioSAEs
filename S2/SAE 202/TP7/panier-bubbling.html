@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Jeu</title>
+		<style type=>
+			#parfums span
+			{
+				padding: .5em;
+				margin: 1em;
+				border: 1px solid blue;
+			}
+			#parfums span:hover
+			{
+				background-color: #ffa;
+			}			
+		</style>
+	</head>
+	<body>
+		<p id="parfums"><span>Fraise</span><span>Chocolat</span><span>Vanille</span><span>Framboise</span></p> 
+		<h4>Panier:</h4>
+		<ul id="panier">
+		</ul>
+		<script>
+			let panier=document.getElementById('panier');
+			let p=document.getElementById('parfums');
+			p.addEventListener('click',function(event){
+			  console.log('Click');
+			  if(event.target.nodeName!=='SPAN'){return;}
+			  let ligne=document.createElement('li');
+			  ligne.textContent=event.target.textContent;
+			  panier.append(ligne);
+			});
+			panier.addEventListener('click',function(event){
+			  console.log('Click ul');
+			  if(event.target.nodeName!=='LI'){return;}
+			  event.target.remove();
+			});
+		</script>
+	</body>
+</html>

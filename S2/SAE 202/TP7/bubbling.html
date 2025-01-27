@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Bubbling</title>
+		<link href="bubbling.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+		<p>
+			<a>Toc !</a>
+			<span>Tac !</span>
+		</p>
+		<script>
+			let toc=document.querySelector('a');
+			toc.addEventListener('click',click_sur_a);
+			function click_sur_a() 
+			{
+			  console.log('click_sur_a');
+			}
+
+			let tac=document.querySelector('span');
+			tac.addEventListener('click',click_sur_span);
+			function click_sur_span() 
+			{
+			  console.log('click_sur_span');
+			}
+
+			let para=document.querySelector('p');
+			para.addEventListener('click',click_sur_p);
+			function click_sur_p() 
+			{
+			  console.log('click_sur_p');
+			}
+
+			let b=document.querySelector('body');
+			b.addEventListener('click',click_sur_body);
+			function click_sur_body() 
+			{
+			  console.log('click_sur_body');
+			}
+
+			let h=document.querySelector('html');
+			b.addEventListener('click',click_sur_html);
+			function click_sur_html() 
+			{
+			  console.log('click_sur_html');
+			}
+		</script>
+	</body>
+</html>

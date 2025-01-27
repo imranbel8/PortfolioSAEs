@@ -1,0 +1,22 @@
+div {
+  font-size: 14pt;
+  font-weight: bold;
+  color: blue;
+}
+label {
+  text-align: center;
+}
+
+td {
+  border: 2px solid red;
+  width: 20px;
+  height: 20px;
+  padding: 24px 24px;
+  
+  background-color: purple;
+}
+
+td:hover {
+  background-color: blue;
+  cursor: pointer;
+}

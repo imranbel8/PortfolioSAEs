@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Trouver des éléments dans l'arbre DOM</title>
+    <link rel="stylesheet" href="css/testDom.css" /> 
+  </head>
+  
+  <body>
+    
+    <h1>Introduction : </h1>
+    
+      <h2>Rappel : </h2>
+        <div>En tp :</div> 
+          <p>Se connecter à <a href="https://moodle.iutv.univ-paris13.fr">Moddle</a>.</p>
+          <p>Créer des fichiers pour <i>tester</i> les sujets abordés.</p>
+        
+      <h2>Autres : </h2>
+        <div>Structurez ses fichiers :</div> 
+          <p>Créez un répertoire pour la leçon.</p>
+          <p>Séparer les fichiers : un fichier html, css, javascript.</p>
+
+        <div>Sauvegarde :</div> 
+          <p>Penser à récupérer son travail ; puisqu'on peut ne pas retrouver ses fichiers dans son esapce en ligne.</p>
+          <p>Enregistrez votre travail sur une clé et/ou se l'envoyer par mail en fin de séance.</p>
+          
+    <h1>Quelques éléments de cours</h1>
+      
+      <h2>Divers :</h2>
+  
+        <span>Utilisation de <a style='font-weight:bold;color:red;'>querySelectorAll</a> : </span>
+        <br>
+        <label> 
+          <input id="nb_div" type="button" value="Cliquer pour avoir le nombre de div : "/>
+          <input type="text" id="div" name="div"/>
+        </label>
+        <label> 
+          <input id="nb_p" type="button" value="Cliquer pour avoir le nombre de p : "/>
+          <input type="text" id="p" name="p"/>
+        </label>
+  
+      <h2>Tableau : </h2>
+      
+        <table>
+          <tr><td>A</td><td>B</td><td>C</td></tr>
+          <tr><td>D</td><td>E</td><td>F</td></tr>
+          <tr><td>G</td><td>H</td><td>I</td></tr>
+        </table>
+    
+        <span>
+          Cibler une cellule du tableau, via 
+          <a style='font-weight:bold;color:red;'>querySelectorAll, querySelector, forEach</a> : 
+        </span>
+        
+        <br>
+        <span>Voir avec l'inspecteur les changements de propriétés (class)</span>
+        <br>
+        <label> 
+          <input id="td" type="button" value="Cliquer dans le tableau pour avoir : "/>
+          <br>
+          <label>La position 
+            <input type="text" id="pos_td" name="pos_td"/>
+          </label>
+          <br>
+          <label>Le contenu <input type="text" id="c_td" name="c_td"/>
+          </label>
+        </label>
+    <!--------------------->
+		<script src="js/testDom.js"></script>
+    
+  </body>
+    
+</html>

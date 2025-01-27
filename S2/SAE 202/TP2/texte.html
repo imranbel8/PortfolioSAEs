@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Texte</title>
+		<style>
+			.erreur{
+				color: red;
+				transition: opacity .3s;
+			}
+		</style>
+	</head>
+	<body>
+		<form method="POST">
+			<p>
+				<label>Nom : <input id="nom" type="text"/></label> 
+				<span class="erreur" id="erreur-nom">Vide !</span>
+			</p>
+			<p>
+				<label>Prénom : <input id="prenom" type="text"/></label> 
+				<span class="erreur" id="erreur-prenom">Vide !</span>
+			</p>
+		</form>
+		<p>Bonjour <span id="affiche-prenom"></span> <span id="affiche-nom"></span>!</p>
+		<script>
+			let inputNom=document.querySelector('#nom');
+            inputNom.addEventListener('keyup',function (event) 
+			{
+               console.log('Touche nom relâchée');
+			   let afficheNom=document.querySelector('#affiche-nom');
+			   afficheNom.textContent=inputNom.value;
+			   let erreur=document.querySelector('#erreur-nom');
+			   if(inputNom.value.length===0){erreur.style.opacity=1;}
+		       else{erreur.style.opacity=0;}
+			});
+			let inputPrenom=document.querySelector('#prenom');
+            inputPrenom.addEventListener('keyup',function (event) 
+			{
+               console.log('Touche prénom relâchée');
+			   let affichePrenom=document.querySelector('#affiche-prenom');
+			   affichePrenom.textContent=inputPrenom.value;
+			   let erreur=document.querySelector('#erreur-prenom');
+			   if(inputPrenom.value.length===0){erreur.style.opacity=1;}
+		       else{erreur.style.opacity=0;}
+			});
+			
+			
+		</script>
+	</body>
+</html>

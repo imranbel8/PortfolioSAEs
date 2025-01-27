@@ -1,0 +1,58 @@
+body:after
+{
+	content: "body";
+	position: absolute;
+	right: .3em;
+	top: 0em;
+}
+
+p 
+{
+	position: relative;
+	width: 20em;
+	margin: 2em;
+	padding: 2em;
+	background-color: #ff8080;
+}
+
+p:after
+{
+	content: "p";
+	position: absolute;
+	right: .3em;
+	top: 0em;
+}
+
+a 
+{
+	margin: 2em;
+	padding: 1em;
+	background-color: #aecf00;
+	position: relative;
+	display: inline-block;
+}
+
+a:after
+{
+	content: "a";
+	position: absolute;
+	right: .3em;
+	top: 0em;
+}
+
+span 
+{
+	display: inline-block;
+	margin: 2em;
+	padding: 1em;
+	background-color: #7777ff;
+	position: relative;
+}
+
+span:after
+{
+	content: "span";
+	position: absolute;
+	right: .3em;
+	top: 0em;
+}

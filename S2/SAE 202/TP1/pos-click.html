@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Pos click</title>
+	</head>
+	<body>
+		<p>
+			La souris se trouve à la position 
+			x=<span id="affiche-x">?</span>, 
+			y=<span id="affiche-y">?</span>
+		</p>
+		<script>
+			document.addEventListener("click",fonction_a_appeler);
+			function fonction_a_appeler(event)
+			{
+			  console.log('coucou',event.pageX,event.pageY);
+			  let ax=document.querySelector("#affiche-x");
+			  let ay=document.querySelector("#affiche-y");
+			  ax.textContent=event.pageX+'px';
+			  ay.textContent=event.pageY+'px';
+			}
+		</script>
+	</body>
+</html>

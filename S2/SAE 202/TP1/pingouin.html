@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Pingouin</title>
+		<style>
+			.splat
+			{
+				position: absolute;
+                /* La position de départ: en bas, au centre */
+				top: 500px;
+				left: 100px;
+                /* Agrandir 4 fois l'image  */
+				transform: scale(4); 
+				/* Définir les propriétés CSS à animer. Toutes en 1 seconde */
+				transition: top 1s,left 1s,transform 1s;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="https://moodle.iutv.univ-paris13.fr/img/bjs/tux.png" alt="tux"/>
+		<script>
+			document.addEventListener('mousedown',ajouter_splat);
+			function ajouter_splat(event) 
+			{
+			  // Petit détail: éviter la sélection 
+			  event.preventDefault();
+			  let i=document.createElement('img');
+			  i.src='https://moodle.iutv.univ-paris13.fr/img/bjs/splat.png';
+			  i.className='splat';
+			  document.body.append(i);
+			  // Forcer le navigateur à prendre en compte la situation actuelle (position, scale).
+			  // Ceci permettra au navigateur de s'apercevoir d'un changement futur des propriétés CSS.
+			  window.getComputedStyle(i).top;
+			  // Changer les propriétés CSS qui transitionnent. 
+			  // Le navigateur s'aperçoit du changement et déclenche la transition.
+			  i.style.top =(event.pageY-16)+'px';
+			  i.style.left=(event.pageX-16)+'px';
+			  i.style.transform='scale(1)';
+			}
+		</script>
+	</body>
+</html>

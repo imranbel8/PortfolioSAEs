@@ -1,0 +1,35 @@
+body
+{
+	margin: 10px;
+}
+
+#cadre
+{
+	width: 500px;
+	height: 500px;
+	border: 1px solid black;
+	overflow: hidden;
+}
+
+#tux
+{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	/* Les changements de top et left prennent 0,3 secondes */
+	transition: top .3s, left .3s; 
+	border: 1px solid #eee;
+}
+
+.splat
+{
+	/* Ceci permet de placer les splats avec top et left */
+	position: absolute;
+    /* La position de départ: en bas, au centre */
+	top: 500px;
+	left: 100px;
+    /* Agrandir 4 fois l'image  */
+	transform: scale(4); 
+	/* Définir les propriétés CSS à animer. Toutes en 1 seconde */
+	transition: top 1s,left 1s,transform 1s,opacity 3s;
+}

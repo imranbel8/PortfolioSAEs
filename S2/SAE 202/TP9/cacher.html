@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"> 
+		<title>exemple1</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</head>
+	<body>
+		<p><input type="button" value="cacher"/></p>
+		<p><img src="http://moodle.iutv.univ-paris13.fr/img/js/tux.png" alt="tux"/></p>
+		<script>
+			$('input').on('click',function(){
+			  if($('input').val()==='cacher')
+			  {
+				$('img').hide();
+				$('input').val('montrer');
+			  }
+			  else                          
+			  {
+				$('img').show();
+				$('input').val('cacher');
+			  }
+			});
+		</script>
+	</body>
+</html>
